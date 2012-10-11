@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: spawn_fcgi
+# Cookbook Name:: spawn-fcgi
 # Recipe:: default
 #
 # Copyright 2012, NREL
@@ -8,10 +8,10 @@
 #
 
 include_recipe "fcgiwrap"
-include_recipe "spawn_fcgi"
+include_recipe "spawn-fcgi"
 
 template "/etc/sysconfig/spawn-fcgi" do
   source "sysconfig.erb"
   mode "0644"
-  notifies :restart, "service[spawn_fcgi]"
+  notifies :restart, "service[spawn-fcgi]"
 end

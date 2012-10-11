@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: spawn_fcgi
+# Cookbook Name:: spawn-fcgi
 # Recipe:: default
 #
 # Copyright 2012, NREL
@@ -19,7 +19,7 @@ user node[:spawn_fcgi][:user] do
   not_if { Etc.getpwnam(node[:spawn_fcgi][:user]) rescue false }
 end
 
-service "spawn_fcgi" do
+service "spawn-fcgi" do
   service_name "spawn-fcgi"
   supports :status => true
   action [:enable, :start]

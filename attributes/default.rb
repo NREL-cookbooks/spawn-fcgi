@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: spawn_fcgi
+# Cookbook Name:: spawn-fcgi
 # Attributes:: default
 #
 # Copyright 2012, NREL
