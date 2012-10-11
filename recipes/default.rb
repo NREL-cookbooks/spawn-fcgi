@@ -22,4 +22,5 @@ end
 service "spawn_fcgi" do
   service_name "spawn-fcgi"
   supports :status => true
+  action [:enable, :start]
 end
