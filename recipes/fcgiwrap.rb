@@ -8,10 +8,11 @@
 #
 
 include_recipe "fcgiwrap"
-include_recipe "spawn-fcgi"
 
 template "/etc/sysconfig/spawn-fcgi" do
-  source "sysconfig.erb"
+  source "sysconfig_fcgiwrap.erb"
   mode "0644"
   notifies :restart, "service[spawn-fcgi]"
 end
+
+include_recipe "spawn-fcgi"
